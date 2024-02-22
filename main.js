@@ -20,7 +20,7 @@ function getQuestions() {
         let qCount = questionsObject.length;
     createBullets(qCount);
     addQuestionData(questionsObject[currentIndex], qCount);
-    countdown(6, qCount);
+    countdown(20, qCount);
     submitButton.onclick = () => {
         let theRightAnswer = questionsObject[currentIndex].right_answer;
         currentIndex++;
@@ -30,7 +30,7 @@ function getQuestions() {
         addQuestionData(questionsObject[currentIndex], qCount);
         handleBullets();
         clearInterval(countdownInterval);
-        countdown(6, qCount);
+        countdown(20, qCount);
         showResults(qCount);
     };
     }
